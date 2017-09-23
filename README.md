@@ -1,2 +1,2 @@
 # FruitShop
-Exercise project 
+Exercise project by myself.
