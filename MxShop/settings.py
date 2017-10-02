@@ -16,14 +16,14 @@ import sys
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, BASE_DIR)
-sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
-sys.path.insert(0, os.path.join(BASE_DIR, "extra_apps"))
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'p$o&n!8+aaz5f9!fh$1#wgda!9bg8vk8^r%1e)=jdhjw87=^_9'
+SECRET_KEY = '$b*yffh!4lhu%9g7^0g++!_u@d28y6mtttso=z9_=-8)e+lm^8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,15 +34,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
+    'users',
 ]
-
-AUTH_USER_MODEL = "users.UserProfile"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,10 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': "mxshop",
-        'USER': "root",
+        'USER': 'root',
         'PASSWORD': "123456",
         'HOST': "127.0.0.1",
-        'OPTIONS': {'init_command': 'SET storage_engine=INNODB;'},
+        'OPTIONS': {'init_command': 'SET default_storage_engine=INNODB;', }
     }
 }
 
