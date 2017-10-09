@@ -5,8 +5,10 @@ from rest_framework.response import Response    # 该处是django REST framework
 from .models import Goods
 from rest_framework import status, generics, mixins
 from rest_framework.pagination import PageNumberPagination
-
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
+from .filter import GoodsFilter
+from rest_framework import filters
 # Create your views here.
 
 
@@ -72,3 +74,31 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
     pagination_class = GoodsPagination
+    filter_backends = (
+        DjangoFilterBackend,
+        filters.SearchFilter,
+        filters.OrderingFilter,
+    )
+
+    # 注册search_fields提供搜索功能
+    search_fields = ('name', 'goods_brief', 'goods_desc')
+
+    # 注册filter_class 或 filter_fields 提供过滤功能
+    filter_class = GoodsFilter
+    # filter_fields = ('name', 'shop_price')
+
+    # 注册ordering_fields提供排序功能
+    ordering_fields = ('sold_num', 'add_time')
+
+    # def get_queryset(self):
+    #     """
+    #     简单的过滤操作
+    #     :return:
+    #     """
+    #     queryset = Goods.objects.all()
+    #     price_min = self.request.query_params.get('price_min', 0)
+    #     if price_min:
+    #         queryset = queryset.filter(shop_price__gt=int(price_min))
+    #     # return Goods.objects.filter(shop_price__gt=100)
+    #     return queryset
+

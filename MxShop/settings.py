@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -139,4 +140,5 @@ MEDIA_URL = '/media/'
 # 分页或其他DRF配置
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
 }
