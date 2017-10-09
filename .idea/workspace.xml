@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aac1ca3c-78b2-4949-b2ce-335bca628bb3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MxShop/settings.py" afterPath="$PROJECT_DIR$/MxShop/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MxShop/urls.py" afterPath="$PROJECT_DIR$/MxShop/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/goods/views.py" afterPath="$PROJECT_DIR$/apps/goods/views.py" />
-    </list>
+    <list default="true" id="aac1ca3c-78b2-4949-b2ce-335bca628bb3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/MxShop/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
-              <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+              <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
               <folding>
                 <element signature="e#640#681#0" expanded="true" />
               </folding>
@@ -48,8 +43,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+            <state relative-caret-position="540">
+              <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
               <folding>
                 <element signature="e#24#64#0" expanded="true" />
               </folding>
@@ -61,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/apps/goods/filter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -336,7 +331,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18043478" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18043478" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1705757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -742,7 +737,7 @@
     <entry file="file://$PROJECT_DIR$/MxShop/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding>
             <element signature="e#640#681#0" expanded="true" />
           </folding>
@@ -760,7 +755,7 @@
     <entry file="file://$PROJECT_DIR$/apps/goods/filter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -769,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        <state relative-caret-position="540">
+          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
           <folding>
             <element signature="e#24#64#0" expanded="true" />
           </folding>
