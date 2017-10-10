@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
-from .serializers import GoodsSerializer
+from .serializers import GoodsSerializer, CategorySerializer
 from rest_framework.views import APIView
-from rest_framework.response import Response    # 该处是django REST framework 的Response,比django的强大很多
-from .models import Goods
+
+# 该处是django REST framework 的Response,比django的强大很多
+from rest_framework.response import Response
+
+from .models import Goods, GoodsCategory
 from rest_framework import status, generics, mixins
 from rest_framework.pagination import PageNumberPagination
 from django_filters.rest_framework import DjangoFilterBackend
@@ -74,6 +77,8 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
     pagination_class = GoodsPagination
+
+    # 设置支持的过滤类型
     filter_backends = (
         DjangoFilterBackend,
         filters.SearchFilter,
@@ -102,3 +107,12 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     #     # return Goods.objects.filter(shop_price__gt=100)
     #     return queryset
 
+
+class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    """
+    list:
+        商品分类列表数据
+    """
+    # queryset = GoodsCategory.objects.all()
+    queryset = GoodsCategory.objects.filter(category_type=1)
+    serializer_class = CategorySerializer

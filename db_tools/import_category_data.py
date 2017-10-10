@@ -34,5 +34,5 @@ for lev1_cat in row_data:
             lev3_instance.code = lev3_cat['code']
             lev3_instance.name = lev3_cat['name']
             lev3_instance.category_type = 3
-            lev2_instance.parent_category = lev2_instance
+            lev3_instance.parent_category = lev2_instance
             lev3_instance.save()
