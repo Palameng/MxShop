@@ -54,9 +54,9 @@ from rest_framework import filters
 
 # 定制序列化数据的分页
 class GoodsPagination(PageNumberPagination):
-    page_size = 10
+    page_size = 12
     page_size_query_param = 'page_size'
-    page_query_param = 'p'
+    page_query_param = 'page'
     max_page_size = 100
 
 
@@ -93,7 +93,7 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     # filter_fields = ('name', 'shop_price')
 
     # 注册ordering_fields提供排序功能
-    ordering_fields = ('sold_num', 'add_time')
+    ordering_fields = ('sold_num', 'shop_price')
 
     # def get_queryset(self):
     #     """

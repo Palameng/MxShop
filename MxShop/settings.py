@@ -141,8 +141,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# 分页或其他DRF配置
-REST_FRAMEWORK = {
-    'PAGE_SIZE': 10,
-    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
-}
+# # 分页或其他DRF配置
+# REST_FRAMEWORK = {
+#     'PAGE_SIZE': 10,
+#     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+# }
