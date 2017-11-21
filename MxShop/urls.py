@@ -21,6 +21,7 @@ from django.views.static import serve
 from rest_framework.documentation import include_docs_urls
 from goods.views import GoodsListViewSet, CategoryViewSet
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views
 
 route = DefaultRouter()
 
@@ -36,7 +37,7 @@ route.register(r'categorys', CategoryViewSet, 'categorys')
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  # 实现了DRF的登录
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
 
     # goods list view
@@ -45,5 +46,7 @@ urlpatterns = [
 
     url(r'^', include(route.urls)),
     url(r'docs/', include_docs_urls(title="MxShop")),
+
+    url(r'^api-token-auth/', views.obtain_auth_token),  # 向这个url POST一个用户名密码生成Token
 
 ]

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from .serializers import GoodsSerializer, CategorySerializer
 from rest_framework.views import APIView
-
+from rest_framework.authentication import TokenAuthentication
 # 该处是django REST framework 的Response,比django的强大很多
 from rest_framework.response import Response
 
@@ -77,6 +77,7 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
     pagination_class = GoodsPagination
+    # authentication_classes = (TokenAuthentication, )
 
     # 设置支持的过滤类型
     filter_backends = (
