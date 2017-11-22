@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from rest_framework_jwt.views import obtain_jwt_token
 # from django.contrib import admin
 import xadmin
 from MxShop.settings import MEDIA_ROOT
@@ -47,6 +48,9 @@ urlpatterns = [
     url(r'^', include(route.urls)),
     url(r'docs/', include_docs_urls(title="MxShop")),
 
+    # drf的自带token认证模式
     url(r'^api-token-auth/', views.obtain_auth_token),  # 向这个url POST一个用户名密码生成Token
 
+    # jwt的认证接口
+    url(r'^jwt-auth/', obtain_jwt_token),
 ]
