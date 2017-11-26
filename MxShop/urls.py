@@ -21,6 +21,7 @@ from MxShop.settings import MEDIA_ROOT
 from django.views.static import serve
 from rest_framework.documentation import include_docs_urls
 from goods.views import GoodsListViewSet, CategoryViewSet
+from users.views import SmsCodeViewset
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
 
@@ -31,6 +32,9 @@ route.register(r'goods', GoodsListViewSet, 'goods')
 
 # 配置category的url
 route.register(r'categorys', CategoryViewSet, 'categorys')
+
+# 配置verifycode的url
+route.register(r'codes', SmsCodeViewset, 'codes')
 
 # good_list = GoodsListViewSet.as_view({
 #     'get': 'list',
@@ -51,6 +55,6 @@ urlpatterns = [
     # drf的自带token认证模式
     url(r'^api-token-auth/', views.obtain_auth_token),  # 向这个url POST一个用户名密码生成Token
 
-    # jwt的认证接口
-    url(r'^jwt-auth/', obtain_jwt_token),
+    # jwt的认证接口，修改成login是因为Vue那边触发登录的url为/login/
+    url(r'^login/', obtain_jwt_token),
 ]

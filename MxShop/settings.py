@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import sys
+import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -41,10 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users.apps.UsersConfig',
-    'goods.apps.GoodsConfig',
-    'user_operation.apps.UserOperationConfig',
-    'trade.apps.TradeConfig',
+    # 'users.apps.UsersConfig',
+    # 'goods.apps.GoodsConfig',
+    # 'user_operation.apps.UserOperationConfig',
+    # 'trade.apps.TradeConfig',
+    'users',
+    'goods',
+    'user_operation',
+    'trade',
     'DjangoUeditor',
     'xadmin',
     'crispy_forms',
@@ -133,7 +138,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = False   # 默认是Ture，时间是utc时间，由于我们要用本地时间，所用手动修改为false！！！！
 
-
+AUTHENTICATION_BACKENDS = (
+    'users.views.CustomBackend',
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
@@ -156,3 +163,14 @@ REST_FRAMEWORK = {
         # 'rest_framework.authentication.TokenAuthentication',
     )
 }
+
+JWT_AUTH = {
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),    # token过期时间
+    'JWT_AUTH_HEADER_PREFIX': 'JWT',    # 当组装HTTP头部的时候使用的 Authentication JWT: xxxx 中的JWT部分
+}
+
+# 手机号码正则表达式
+REGEX_MOBILE = "^1[358]\d{9}$|^147\d{8}$|^176\d{8}$"
+
+# 云片网API key
+APIKEY = ""
