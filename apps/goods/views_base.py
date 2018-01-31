@@ -16,6 +16,7 @@ class GoodsListView(View):
         """
         json_list = []
         goods = Goods.objects.all()[:10]
+        # 使用遍历方法填充json_dict
         # for good in goods:
         #     json_dict = {}
         #     json_dict['name'] = good.name
@@ -23,6 +24,7 @@ class GoodsListView(View):
         #     json_dict['market_price'] = good.market_price
         #     json_list.append(json_dict)
 
+        # 使用model_to_dict方法
         # for good in goods:
         #     json_dict = model_to_dict(good)
         #     json_list.append(json_dict)
